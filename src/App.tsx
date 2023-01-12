@@ -6,7 +6,7 @@ import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <div className='bg-black text-white m-auto antialised font-sans text-center'>  
+    <div className='bg-black text-white m-auto antialised font-sans'>  
     <Hero/>
     <NavBar/>
     </div>
