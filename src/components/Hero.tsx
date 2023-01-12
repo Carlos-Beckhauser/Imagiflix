@@ -6,7 +6,7 @@ const Hero = ({title = 'Avengers Endgame', score = 10 }) => {
     const getBorderColor = () => {
         if (score >= 7) {
             return 'border-green-400';
-        } else if (score < 7 && score > 4) {return 'border-yellow-400';
+        } else if (score > 4 && score < 7) {return 'border-yellow-400';
         } else { 
             return 'border-red-400';
         }
