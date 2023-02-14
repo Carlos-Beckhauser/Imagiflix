@@ -15,6 +15,7 @@
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
+    "fbemitter": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -49,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@types/fbemitter": "^2.0.32",
     "@types/react-slick": "^0.23.10",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",

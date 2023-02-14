@@ -20,7 +20,7 @@ const Carousel = ({title = 'Filmes em destaque', data = mockData}: CarouselData)
         right,
     }
 
-    const SlickArrow = ({direction, onClick} : {direction : Direction, onClick?: () => {}}) => (
+    const SlickArrow = ({direction, onClick} : {direction : Direction, onClick?: () => void}) => (
 
         <button type="button" className={`absolute w-16 h-full z-10 bg-black bg-opacity-40 top-0 ${direction ? 'right-0' : 'left-0'}`} onClick={onClick}>
             <FontAwesomeIcon icon={direction ? faChevronRight : faChevronLeft} size='3x'/>
