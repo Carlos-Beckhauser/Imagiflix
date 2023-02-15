@@ -11,6 +11,7 @@ import NavBar from './components/NavBar';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 import Loading from './components/Loading';
+import Modal from './components/Modal';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -31,7 +32,7 @@ const App = () => {
  
   const [ movies, setMovies ] = useState<any>();
   const [ series, setSeries ] = useState<any>();
-  const [title, setTitle] = useState();
+  const [title, setTitle] = useState<any>();
   const [loading, setLoading] = useState<any>(true)
 
   const getFeaturedMovie = () => movies && movies?.results[0];
@@ -57,6 +58,7 @@ const App = () => {
   useEffect(() => {
 
     emitter.addListener(CONST.EVENTS.PosterClick, getTitle)
+    emitter.addListener(CONST.EVENTS.ModalClose, () => setTitle(undefined))
 
     const fetchData = async () => {
       
@@ -96,7 +98,7 @@ useEffect(() => title && console.log(title), [ title ])
           <NavBar/>
           <Carousel title='Filmes Populares' data={getMovieList()} />
           <Carousel title ='Séries Populares' data={series?.results}/>
-          
+          {title && <Modal {...title} />}
         </>
   )}
   <Footer />
