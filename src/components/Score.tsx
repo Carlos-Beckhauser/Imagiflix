@@ -1,4 +1,3 @@
-import { stringify } from "querystring";
 import React from "react";
 
 import './Score.css';

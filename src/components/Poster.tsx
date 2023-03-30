@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 
 import CONST from '../data/constants';
-import { Title, TitleType } from '../App';
+import { TitleType } from '../App';
 
 import Score from "./Score";
 
