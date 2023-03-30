@@ -39,7 +39,7 @@ const App = () => {
 
   const getMovieList = () => {
     if (movies) {
-      const [featured, ...movieList] = movies?.results;
+      const [ ...movieList] = movies?.results;
       return movieList;
     }
     return [];
@@ -76,7 +76,7 @@ const App = () => {
 
     fetchData();
 
-  }, []);
+  }, );
 
 useEffect(() => title && console.log(title), [ title ])
 
